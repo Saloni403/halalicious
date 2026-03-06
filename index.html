@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Halalicious | Comming Soon</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">    
+<style>
+  .button{
+    background-color: black;
+    position: absolute;
+    top: 50%;
+    margin-top: 3vh;
+    left: 2vh;
+    padding: 1vh 2.5vh;
+    border-radius: 5px;
+  }
+  .button2{
+    background-color: black;
+    position: absolute;
+    top: 35%;
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 1vh 2.5vh;
+    border-radius: 5px;
+  }
+ .button2 a , .button a{
+    color: #fff;
+    text-decoration: none;
+font-size: 2.5vh;
+    vertical-align: text-top;
+  }
+</style>
+</head>
+<body>
+   
+<div class="position-relative">
+    <img src="" width="100%" alt="">
+     <div class="button">
+        <a href="https://wa.me/919220621133" target="_blank">Be the First to Try</a>
+     </div>
+</div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+    <script>
+        const img = document.querySelector("img");
+        let mycta = document.querySelector(".button");
+
+    function updateImage() {
+        if (window.innerHeight > window.innerWidth) {
+            // Portrait mode
+            img.src = "port/2nd.jpeg";
+            mycta.classList.remove("button")
+       mycta.classList.add("button2")
+       
+        } else {
+            // Landscape mode
+            img.src = "landing/2nd.jpeg";
+             mycta.classList.remove("button2")
+            mycta.classList.add("button")
+
+        }
+    }
+
+    // Run on page load
+    updateImage();
+
+    // Run when orientation changes / window resizes
+    window.addEventListener("resize", updateImage);
+    </script>
+</body>
+</html>
